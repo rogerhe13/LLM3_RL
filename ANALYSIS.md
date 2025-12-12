@@ -13,7 +13,7 @@ All methods were trained on the Anthropic HH-RLHF dataset using GPT-2 as the bas
 
 ## 4.1 Quantitative Evaluation
 
-### Summary Results
+### Summary Results 
 
 | Metric | Base | PPO | GRPO | DPO |
 |--------|------|-----|------|-----|
@@ -24,7 +24,7 @@ All methods were trained on the Anthropic HH-RLHF dataset using GPT-2 as the bas
 
 ### Win Rates (GPT-4-as-Judge)
 
-We evaluated model outputs using GPT-3.5-turbo as a judge on 100 test prompts:
+We evaluated model outputs using GPT-4.1-mini as a judge on 100 test prompts:
 
 | Comparison | Win Rate |
 |------------|----------|
