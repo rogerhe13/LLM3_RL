@@ -1,7 +1,5 @@
 # Assignment 3: Reinforcement Learning from Human Feedback
 
-Student : Weihao He
-
 ## Overview
 
 This project implements and compares three RLHF methods for aligning language models:
@@ -70,31 +68,42 @@ We analyzed 50 error cases to understand reward model failure patterns:
 
 ```
 .
-├── part1/                      # Reward Model Training
-│   ├── reward_model.py         # Reward model implementation
-│   ├── train_reward_model.py   # Training script
-│   └── reward_model_output/    # Trained model
+├── part1/                          # Reward Model Training
+│   ├── evaluation_results/         # Evaluation outputs
+│   ├── reward_model_output/        # Trained model
+│   ├── dataset.py                  # Dataset utilities
+│   ├── evaluate_reward_model.py    # Evaluation script
+│   ├── reward_model.py             # Reward model implementation
+│   ├── train_reward_model.py       # Training script
+│   └── run_part1.sh                # Run script
 │
-├── part2/                      # PPO & GRPO Implementation
-│   ├── policy_model.py         # Policy model wrapper
-│   ├── ppo_trainer.py          # PPO training
-│   ├── grpo_trainer.py         # GRPO training
-│   ├── compare_methods.py      # Comparison script
-│   └── run_part2.sh            # Run script
+├── part2/                          # PPO & GRPO Implementation
+│   ├── ppo_output/                 # PPO trained model & results
+│   ├── compare_methods.py          # Comparison script
+│   ├── grpo_trainer.py             # GRPO training
+│   ├── policy_model.py             # Policy model wrapper
+│   ├── ppo_trainer.py              # PPO training
+│   ├── sft_trainer.py              # SFT pre-training
+│   └── run_part2.sh                # Run script
 │
-├── part3/                      # DPO Implementation
-│   ├── dpo_trainer.py          # DPO training
-│   └── run_part3.sh            # Run script
+├── part3/                          # DPO Implementation
+│   ├── compare_all_methods.py      # All methods comparison
+│   ├── dpo_trainer.py              # DPO training
+│   ├── efficiency_stats.json       # Efficiency statistics
+│   ├── training_curves.png         # Training visualization
+│   ├── training_history.json       # Training logs
+│   └── run_part3.sh                # Run script
 │
-├── part4/                      # Analysis & Evaluation
-│   ├── generate_samples.py     # Sample generation
-│   ├── gpt4_judge.py           # GPT-4-as-judge evaluation
-│   ├── analysis.py             # Analysis & plotting
-│   └── run_part4.sh            # Run script
+├── part4/                          # Analysis & Evaluation
+│   ├── analysis.py                 # Analysis & plotting
+│   ├── generate_samples.py         # Sample generation
+│   ├── gpt4_judge.py               # GPT-4-as-judge evaluation
+│   └── run_part4.sh                # Run script
 │
-├── ANALYSIS.md                 # analysis details
-├── Dockerfile                  # Container definition
-└── README.md                   # This file
+├── ANALYSIS.md                     # Main analysis report
+├── README.md                       # This file
+├── Dockerfile                      # Container definition
+└── requirements.txt                # Python dependencies
 ```
 
 ## Requirements
@@ -219,7 +228,7 @@ python analysis.py
 **Expected output**:
 - Samples: `part4/samples/`
 - Figures: `part4/figures/`
-- Analysis: `part4/ANALYSIS.md`
+- Analysis: `ANALYSIS.md` (in project root)
 
 ## Results Summary
 
@@ -237,7 +246,7 @@ python analysis.py
 3. **GRPO underperforms** with small batch/group sizes
 4. All methods improve significantly over the base model
 
-See `part4/ANALYSIS.md` for detailed analysis.
+See `ANALYSIS.md` for detailed analysis.
 
 ## Compute Requirements
 
