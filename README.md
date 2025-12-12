@@ -90,9 +90,9 @@ We analyzed 50 error cases to understand reward model failure patterns:
 │   ├── generate_samples.py     # Sample generation
 │   ├── gpt4_judge.py           # GPT-4-as-judge evaluation
 │   ├── analysis.py             # Analysis & plotting
-│   ├── ANALYSIS.md             # Analysis report
 │   └── run_part4.sh            # Run script
 │
+├── ANALYSIS.md                 # analysis details
 ├── Dockerfile                  # Container definition
 └── README.md                   # This file
 ```
