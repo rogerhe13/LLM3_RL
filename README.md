@@ -44,7 +44,7 @@ Our trained reward model achieves the following performance:
 | Min | -3.284 | -3.544 |
 | Max | 2.072 | 1.931 |
 
-![Reward Distribution](part1/reward_model_output/reward_distributions.png)
+![Reward Distribution](part1/evaluation_results/reward_distributions.png)
 
 ### Error Analysis
 
