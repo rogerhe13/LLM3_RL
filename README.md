@@ -1,5 +1,7 @@
 # Assignment 3: Reinforcement Learning from Human Feedback
 
+Student : Weihao He
+
 ## Overview
 
 This project implements and compares three RLHF methods for aligning language models:
@@ -120,7 +122,7 @@ We analyzed 50 error cases to understand reward model failure patterns:
 
 ## Setup
 
-### Using Docker
+### Using Docker (Recommended)
 
 ```bash
 # Build the container
@@ -128,7 +130,18 @@ docker build -t rlhf-assignment .
 
 # Run with GPU support
 docker run --gpus all -it -v $(pwd):/workspace rlhf-assignment
+
+# Inside container, run all experiments sequentially:
+cd /workspace/part1 && bash run_part1.sh
+cd /workspace/part2 && bash run_part2.sh
+cd /workspace/part3 && bash run_part3.sh
+cd /workspace/part4 && bash run_part4.sh
 ```
+
+**Docker Commands Explained:**
+- `--gpus all`: Enable GPU access inside container
+- `-it`: Interactive mode with terminal
+- `-v $(pwd):/workspace`: Mount current directory to /workspace
 
 ### Manual Installation
 
@@ -278,7 +291,3 @@ See `ANALYSIS.md` for detailed analysis.
 - Reduce number of evaluation samples
 
 
-
-## License
-
-MIT License
