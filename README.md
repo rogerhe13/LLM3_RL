@@ -103,6 +103,7 @@ We analyzed 50 error cases to understand reward model failure patterns:
 │   ├── gpt4_judge.py               # GPT-4-as-judge evaluation
 │   └── run_part4.sh                # Run script
 │
+├── samples                         # 20 samples for each model
 ├── ANALYSIS.md                     # Main analysis report
 ├── README.md                       # This file
 ├── Dockerfile                      # Container definition
