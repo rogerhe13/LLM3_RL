@@ -212,15 +212,6 @@ See `part4/ANALYSIS.md` for detailed analysis.
 - Add delays between API calls
 - Reduce number of evaluation samples
 
-## Citation
-
-```
-@misc{rlhf-assignment,
-  title={RLHF Assignment: PPO, GRPO, and DPO Implementation},
-  author={[Your Name]},
-  year={2024}
-}
-```
 
 ## License
 
