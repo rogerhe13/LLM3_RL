@@ -24,7 +24,7 @@ All methods were trained on the Anthropic HH-RLHF dataset using GPT-2 (124M para
 
 ### Win Rates (GPT-4-as-Judge)
 
-We evaluated model outputs using GPT-3.5-turbo as a judge on 100 test prompts. Each comparison presents the same prompt to both models and asks the judge which response is better.
+I evaluated model outputs using GPT-4.1-mini as a judge on 100 test prompts. Each comparison presents the same prompt to both models and asks the judge which response is better.
 
 | Comparison | Win Rate | Analysis |
 |------------|----------|----------|
@@ -98,7 +98,7 @@ The Pareto frontier visualizes the trade-off between reward maximization and sta
 
 ### Task A: Failure Mode Analysis
 
-We tested all models with adversarial prompts designed to expose potential failure modes.
+I tested all models with adversarial prompts designed to expose potential failure modes.
 
 #### 1. Excessive Agreement (Sycophancy)
 
