@@ -16,7 +16,7 @@ This project implements and compares three RLHF methods for aligning language mo
 
 ### Anthropic HH-RLHF Dataset
 
-We use the [Anthropic HH-RLHF dataset](https://huggingface.co/datasets/Anthropic/hh-rlhf), which contains human preference data for training helpful and harmless AI assistants.
+I use the [Anthropic HH-RLHF dataset](https://huggingface.co/datasets/Anthropic/hh-rlhf), which contains human preference data for training helpful and harmless AI assistants.
 
 **Dataset Statistics:**
 - Training samples: ~160,000 preference pairs
@@ -48,7 +48,7 @@ Our trained reward model achieves the following performance:
 
 ### Error Analysis
 
-We analyzed 50 error cases to understand reward model failure patterns:
+I analyzed 50 error cases to understand reward model failure patterns:
 
 | Error Pattern | Count | Percentage |
 |---------------|-------|------------|
