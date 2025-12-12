@@ -1,5 +1,7 @@
 # Assignment 3: Reinforcement Learning from Human Feedback
 
+Student : Weihao He
+
 ## Overview
 
 This project implements and compares three RLHF methods for aligning language models:
