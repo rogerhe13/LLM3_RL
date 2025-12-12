@@ -66,7 +66,7 @@ The Pareto frontier shows the trade-off between reward maximization and staying 
 
 ### Training Curves
 
-![Training Curves](figures/training_curves_comparison.png)
+![Training Curves](figures/training_curves.png)
 
 **Observations**:
 
