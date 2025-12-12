@@ -70,6 +70,7 @@ We analyzed 50 error cases to understand reward model failure patterns:
 
 ```
 .
+├── figures                         # analysis figures
 ├── part1/                          # Reward Model Training
 │   ├── evaluation_results/         # Evaluation outputs
 │   ├── reward_model_output/        # Trained model
