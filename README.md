@@ -120,7 +120,7 @@ We analyzed 50 error cases to understand reward model failure patterns:
 
 ## Setup
 
-### Using Docker (Recommended)
+### Using Docker
 
 ```bash
 # Build the container
