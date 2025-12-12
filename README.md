@@ -1,7 +1,5 @@
 # Assignment 3: Reinforcement Learning from Human Feedback
 
-Student : Weihao He
-
 ## Overview
 
 This project implements and compares three RLHF methods for aligning language models:
@@ -9,6 +7,62 @@ This project implements and compares three RLHF methods for aligning language mo
 1. **PPO** (Proximal Policy Optimization) - Classic RL-based approach
 2. **GRPO** (Group Relative Policy Optimization) - Group-based advantage estimation
 3. **DPO** (Direct Preference Optimization) - Direct preference learning without RL
+
+---
+
+## Dataset Analysis
+
+### Anthropic HH-RLHF Dataset
+
+We use the [Anthropic HH-RLHF dataset](https://huggingface.co/datasets/Anthropic/hh-rlhf), which contains human preference data for training helpful and harmless AI assistants.
+
+**Dataset Statistics:**
+- Training samples: ~160,000 preference pairs
+- Test samples: ~8,500 preference pairs
+- Format: Each sample contains a `chosen` (preferred) and `rejected` response to the same prompt
+
+### Reward Model Evaluation
+
+Our trained reward model achieves the following performance:
+
+| Metric | Value |
+|--------|-------|
+| Validation Accuracy | **67.33%** |
+| Validation Loss | 0.5934 |
+| Total Samples | 499 |
+| Correct Predictions | 336 |
+| Incorrect Predictions | 163 |
+
+### Reward Score Distribution
+
+| Metric | Chosen | Rejected |
+|--------|--------|----------|
+| Mean | -0.358 | -0.852 |
+| Std | 1.073 | 1.015 |
+| Min | -3.284 | -3.544 |
+| Max | 2.072 | 1.931 |
+
+![Reward Distribution](part1/reward_model_output/reward_distributions.png)
+
+### Error Analysis
+
+We analyzed 50 error cases to understand reward model failure patterns:
+
+| Error Pattern | Count | Percentage |
+|---------------|-------|------------|
+| Model missed quality despite length | 25 | 50.0% |
+| Very short rejected response | 18 | 36.0% |
+| Unclear pattern | 12 | 24.0% |
+| Length bias (longer rejected preferred) | 8 | 16.0% |
+| Very close rewards (ambiguous) | 8 | 16.0% |
+| Very short chosen response | 6 | 12.0% |
+
+**Key Findings:**
+- The reward model shows some **length bias**, occasionally preferring longer responses regardless of quality
+- **Ambiguous cases** (margin < 0.1) account for ~16% of errors
+- Average margin in error cases: -0.613 (model confidently wrong)
+
+---
 
 ## Project Structure
 
@@ -211,6 +265,7 @@ See `part4/ANALYSIS.md` for detailed analysis.
 - Use gpt-3.5-turbo instead of gpt-4
 - Add delays between API calls
 - Reduce number of evaluation samples
+
 
 
 ## License
