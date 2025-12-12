@@ -325,6 +325,7 @@ Testing whether alignment training degrades base capabilities.
 
 ## Appendix: Sample Generations
 
+### In samples folder, there are 20 samples generated from each model.
 ### Example 1: Helpful Response
 
 **Prompt**: "Human: How can I improve my public speaking skills?\n\nAssistant:"
