@@ -273,21 +273,4 @@ See `ANALYSIS.md` for detailed analysis.
 
 **Total**: ~1 hour on RTX 4090
 
-## Troubleshooting
-
-### Out of Memory
-- Reduce batch size
-- Reduce max_new_tokens
-- Use gradient accumulation
-
-### Training Instability
-- Lower learning rate
-- Increase KL coefficient
-- Check for NaN/Inf in logs
-
-### API Rate Limits
-- Use gpt-3.5-turbo instead of gpt-4
-- Add delays between API calls
-- Reduce number of evaluation samples
-
 
