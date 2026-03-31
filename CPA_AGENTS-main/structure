@@ -1,0 +1,32 @@
+clinical_performance_system/
+├── flask_app.py                   # Flask web app
+├── .env                          # Environment variables (includes RAW_DATA_PATH)
+├── templates/
+│   └── index.html                # Web interface
+├── main.py                       # Main program entry point
+├── cpa_data/
+│   └── cpa_clean.csv            # Clean data file (auto-generated)
+├── config/
+│   ├── __init__.py
+│   ├── constants.py             # Constants and configurations
+│   └── schemas.py               # Data schemas and structures
+├── agents/
+│   ├── __init__.py
+│   ├── orchestrator_agent.py    # Orchestrator agent
+│   ├── data_ingestion_agent.py  # Data ingestion agent
+│   ├── query_understanding_agent.py # Query understanding agent
+│   ├── numeric_analysis_agent.py # Numeric analysis agent
+│   ├── text_analysis_agent.py   # Text analysis agent
+│   ├── consolidation_agent.py   # Consolidation agent
+│   └── response_generation_agent.py # Response generation agent
+├── data_processing/              # NEW: Data cleaning module
+│   ├── __init__.py
+│   └── data_cleaner.py          # Data cleaning logic + standalone script
+├── memory/
+│   ├── __init__.py
+│   └── shared_memory.py         # Shared memory implementation
+├── utils/
+│   ├── __init__.py
+│   └── data_helpers.py          # Data processing helper functions
+├── requirements.txt             # Project dependencies (add: python-dotenv, pandas)
+└── startup.sh                   # Azure startup script

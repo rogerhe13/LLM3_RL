@@ -1,6 +1,4 @@
-# Assignment 3: Reinforcement Learning from Human Feedback
-
-Student : Weihao He
+# Reinforcement Learning from Human Feedback
 
 ## Overview
 
