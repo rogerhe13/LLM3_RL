@@ -6,7 +6,7 @@ Reward model for RLHF using GPT-2 as backbone.
 import torch
 import torch.nn as nn
 from transformers import AutoModel, AutoTokenizer
-
+""
 
 class RewardModel(nn.Module):
     """

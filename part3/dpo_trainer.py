@@ -3,7 +3,7 @@ Part 3: Direct Preference Optimization (DPO) Implementation
 
 DPO bypasses explicit reward modeling by directly optimizing the policy
 using preference data.
-
+''
 Key formula:
 L_DPO = -E[log σ(β * (log π(y_w|x)/π_ref(y_w|x) - log π(y_l|x)/π_ref(y_l|x)))]
 
